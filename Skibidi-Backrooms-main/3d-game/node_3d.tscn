@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://AddOns/proto_controller.tscn" id="1_a202f"]
 [ext_resource type="PackedScene" uid="uid://01ey66m444ni" path="res://skibidi_toilet.tscn" id="2_noarx"]
+[ext_resource type="PackedScene" uid="uid://b4x6s184jfhb4" path="res://jumpscare_ui.tscn" id="3_a0tk4"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_a202f"]
 
@@ -852,3 +853,5 @@ size = Vector3(286.1904, 1, 196.49094)
 
 [node name="Skibidi toilet" parent="." unique_id=734513457 instance=ExtResource("2_noarx")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.34584785, -0.038184434, -55.48861)
+
+[node name="jumpscare" parent="." unique_id=1621639298 instance=ExtResource("3_a0tk4")]

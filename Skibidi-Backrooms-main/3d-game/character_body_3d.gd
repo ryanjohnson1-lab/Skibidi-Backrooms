@@ -30,3 +30,15 @@ func _physics_process(delta: float) -> void:
 
 	# This is the built-in function that actually moves the character
 	move_and_slide()
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	
+	if body.is_in_group("player"):
+		var jumpscare = get_tree().get_first_node_in_group("jumpscare_ui")
+		if jumpscare:
+			print("UI Found! Triggering jumpscare.")
+			jumpscare.trigger_jumpscare()
+			set_physics_process(false)
+		else:
+			print("ERROR: Could not find a node in the 'jumpscare_ui' group!")

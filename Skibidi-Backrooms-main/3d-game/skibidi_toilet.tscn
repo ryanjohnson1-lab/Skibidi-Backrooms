@@ -22,6 +22,9 @@ emission_energy_multiplier = 16.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mi2r1"]
 albedo_color = Color(0, 0, 0, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nlfgb"]
+size = Vector3(0.68896484, 1.6313477, 1.2397461)
+
 [node name="Skibidi toilet" type="Node3D" unique_id=734513457]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=684078232]
@@ -88,3 +91,11 @@ size = Vector3(0.07303518, 0.03846073, 0.024464846)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17882125, 0.86027473, 0.535416)
 material_override = SubResource("StandardMaterial3D_mi2r1")
 size = Vector3(0.24794337, 0.03846073, 0.024464846)
+
+[node name="Area3D" type="Area3D" parent="CharacterBody3D" unique_id=1273003724]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/Area3D" unique_id=1323507653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15551758, 0.31567383, -0.11987305)
+shape = SubResource("BoxShape3D_nlfgb")
+
+[connection signal="body_entered" from="CharacterBody3D/Area3D" to="CharacterBody3D" method="_on_area_3d_body_entered"]
