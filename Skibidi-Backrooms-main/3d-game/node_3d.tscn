@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://AddOns/proto_controller.tscn" id="1_a202f"]
 [ext_resource type="PackedScene" uid="uid://01ey66m444ni" path="res://skibidi_toilet.tscn" id="2_noarx"]
 [ext_resource type="PackedScene" uid="uid://b4x6s184jfhb4" path="res://jumpscare_ui.tscn" id="3_a0tk4"]
+[ext_resource type="PackedScene" uid="uid://cemo2bun6wfc4" path="res://win.tscn" id="4_jka67"]
+[ext_resource type="PackedScene" uid="uid://dv76bn8jhbk55" path="res://tung_tung.tscn" id="5_i5arm"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_a202f"]
 
@@ -855,3 +857,16 @@ size = Vector3(286.1904, 1, 196.49094)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.34584785, -0.038184434, -55.48861)
 
 [node name="jumpscare" parent="." unique_id=1621639298 instance=ExtResource("3_a0tk4")]
+
+[node name="win" parent="." unique_id=1901611003 instance=ExtResource("4_jka67")]
+
+[node name="tung tung" parent="." unique_id=262417073 instance=ExtResource("5_i5arm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -117.83027, 1.5231825, -114.8944)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1147882845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3592429, -19.870584)
+modulate = Color(1, 0, 0, 1)
+text = "Save tung tung tung sahur from the backrooms.
+ watch out for skibidi toilet
+"
+font_size = 45
