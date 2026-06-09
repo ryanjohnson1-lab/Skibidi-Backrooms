@@ -1,0 +1,854 @@
+[gd_scene format=3 uid="uid://dwdk8omm07mik"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://AddOns/proto_controller.tscn" id="1_a202f"]
+[ext_resource type="PackedScene" uid="uid://01ey66m444ni" path="res://skibidi_toilet.tscn" id="2_noarx"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_a202f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xowi"]
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(1, 1, 0.58431375, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a202f"]
+albedo_color = Color(1, 1, 0.58431375, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_noarx"]
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(1, 0, 0.58431375, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
+albedo_color = Color(0.7539839, 0.75398386, 0.75398386, 1)
+
+[node name="Backrooms" type="Node3D" unique_id=523242699]
+
+[node name="ProtoController" parent="." unique_id=1847956637 groups=["player"] instance=ExtResource("1_a202f")]
+transform = Transform3D(0.99985844, 0, -0.016824167, 0, 1, 0, 0.016824167, 0, 0.99985844, 0.44203424, 0.18476003, 5.404842)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1157852496]
+camera_attributes = SubResource("CameraAttributesPractical_a202f")
+
+[node name="Walls and floor" type="Node3D" parent="." unique_id=2039602895]
+
+[node name="Wall" type="CSGBox3D" parent="Walls and floor" unique_id=1501599889]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 0.19011304, 1.4861364, -3.3677404)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.919983)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall" unique_id=45584650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.047590643, -0.2807684, -0.32955575)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.394592)
+
+[node name="Wall2" type="CSGBox3D" parent="Walls and floor" unique_id=38187066]
+transform = Transform3D(-8.4182346e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258676, 0, -1.2872364e-07, 0.19011304, 1.4861364, -18.000149)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.919983)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall2" unique_id=1645774860]
+transform = Transform3D(0.9999941, 0, -7.034373e-13, 0, 0.99999183, 0, -2.4868996e-14, 0, 1, 0.047587395, -0.28076828, 0.21644185)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 9.486588)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall2" unique_id=1505755515]
+transform = Transform3D(0.9999827, 0, -2.060574e-12, 0, 0.9999755, 0, -1.7763568e-15, 0, 1, -0.1803484, -0.28076822, 0.02092506)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.6271362, 3.410736, 2.2148323)
+
+[node name="Wall3" type="CSGBox3D" parent="Walls and floor" unique_id=630535035]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 14.799236, 1.4861364, -26.200768)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.919983)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall3" unique_id=1810127495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000045, 0.047590256, -0.2807684, -0.32955647)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.394592)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall3" unique_id=1982748962]
+transform = Transform3D(-4.3711168e-08, 0, 1.5291051, 0, 0.99999183, 0, -0.6539921, 0, -4.371244e-08, -7.9096103, -0.28076828, 2.7536077)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 10.343082)
+
+[node name="Wall4" type="CSGBox3D" parent="Walls and floor" unique_id=926012281]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, -14.699699, 1.4861364, -26.200768)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.919983)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall4" unique_id=860264837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000093, 0.047590256, -0.2807684, -0.3295555)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.394592)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Walls and floor/Wall4" unique_id=2048443027]
+transform = Transform3D(-4.3711168e-08, 0, 1.5291051, 0, 0.99999183, 0, -0.6539922, 0, -4.3712443e-08, 7.4076095, -0.28076828, 2.7536077)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 10.343082)
+
+[node name="Wall5" type="CSGBox3D" parent="Walls and floor" unique_id=318271572]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 1.3091927, 1.4861364, -58.751923)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(20.191284, 3.1713867, 15.499542)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall5" unique_id=1134169915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000409, -0.12056911, -0.2807684, 0.12495232)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(19.548264, 3.410736, 14.933365)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall5" unique_id=2136841656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000094, -8.264971, -0.2807684, 10.724018)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.394592)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Walls and floor/Wall5" unique_id=1886610741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000758, 0.5971862, -0.2807684, -10.329586)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.8620167)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall5" unique_id=463400453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000046, 7.0522485, -0.2807684, 10.724018)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.394592)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Walls and floor/Wall5" unique_id=1017274504]
+transform = Transform3D(-4.371063e-08, 0, 1.5291051, 0, 0.9999752, 0, -0.65396595, 0, -4.371003e-08, -15.00197, -0.28076822, 5.612466)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.956669)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Walls and floor/Wall5" unique_id=1112693178]
+transform = Transform3D(-4.3710482e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.65396327, 0, -4.370971e-08, -15.359288, -0.28076822, -4.7753487)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 9.38666)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Walls and floor/Wall5" unique_id=1695608721]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, 13.926713, -0.28076822, -5.271183)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.7436557)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Walls and floor/Wall5" unique_id=64663025]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, 18.352942, -0.28076822, 4.7681665)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 15.534485)
+
+[node name="Wall6" type="CSGBox3D" parent="Walls and floor" unique_id=1219520598]
+transform = Transform3D(-8.4182346e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258676, 0, -1.2872364e-07, -28.76102, 1.4861364, -42.132385)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.524452)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall6" unique_id=131921070]
+transform = Transform3D(0.9999785, 0, -2.5650593e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.04758835, -0.28076822, 0.16648006)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 9.38666)
+
+[node name="Wall7" type="CSGBox3D" parent="Walls and floor" unique_id=1200745424]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, -42.913563, 1.4861364, -57.443756)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 12.841827)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall7" unique_id=1544513185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000225, 0.047590256, -0.2807684, 0.10009003)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 12.424698)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall7" unique_id=1260967998]
+transform = Transform3D(-4.3710482e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.65396327, 0, -4.370971e-08, 7.320221, -0.28076822, 5.1682444)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 9.38666)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Walls and floor/Wall7" unique_id=739401622]
+transform = Transform3D(-4.3710195e-08, 0, 1.5291051, 0, 0.999961, 0, -0.6539595, 0, -4.3709264e-08, -6.1978855, -0.28076822, -1.1113834)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.490693)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall7" unique_id=1600058032]
+transform = Transform3D(-4.3710482e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.65396327, 0, -4.370971e-08, 7.603224, -0.28076822, -5.21957)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 9.38666)
+
+[node name="Wall8" type="CSGBox3D" parent="Walls and floor" unique_id=1955425214]
+transform = Transform3D(-8.4182346e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258676, 0, -1.2872364e-07, -28.76102, 1.4861364, -72.72298)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.524452)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall8" unique_id=927845335]
+transform = Transform3D(-4.371139e-08, 0, -1.5292106, 0, 0.9999999, 0, 0.65397733, 0, -4.371441e-08, 5.3822746, -0.28076836, -0.40005302)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 5.8793063)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall8" unique_id=300573162]
+transform = Transform3D(0.9999785, 0, -2.5650593e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.04758835, -0.28076822, 0.16648006)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 9.38666)
+
+[node name="Wall9" type="CSGBox3D" parent="Walls and floor" unique_id=259925355]
+transform = Transform3D(-8.4182346e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258676, 0, -1.2872364e-07, -56.659374, 1.4861364, -60.624977)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.524452)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall9" unique_id=993957498]
+transform = Transform3D(-4.371139e-08, 0, -1.5291582, 0, 0.9999999, 0, 0.65397733, 0, -4.3712916e-08, -6.0813866, -0.28076836, -0.6073055)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.7746315)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall9" unique_id=1207237244]
+transform = Transform3D(-4.371139e-08, 0, -1.5291839, 0, 0.9999999, 0, 0.65397733, 0, -4.3713648e-08, 9.308908, -0.28076836, -2.5203934)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.198513)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall9" unique_id=341098264]
+transform = Transform3D(0.9999727, 0, -3.2542857e-12, 0, 0.999961, 0, 3.5527137e-15, 0, 1, 0.047584534, -0.28076822, 0.6144638)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.490693)
+
+[node name="Wall10" type="CSGBox3D" parent="Walls and floor" unique_id=1464492496]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, -58.539448, 1.4861364, -48.52218)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 6.78273)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall10" unique_id=992431688]
+transform = Transform3D(-4.3710195e-08, 0, 1.5291051, 0, 0.999961, 0, -0.6539602, 0, -4.370932e-08, -6.5198936, -0.28076822, 2.196168)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.490693)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall10" unique_id=370730952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000349, 0.047590256, -0.2807684, -0.13272476)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.7746315)
+
+[node name="Wall11" type="CSGBox3D" parent="Walls and floor" unique_id=556943362]
+transform = Transform3D(-8.4182346e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258676, 0, -1.2872364e-07, -80.246666, 1.4861364, -41.963146)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 12.510273)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall11" unique_id=1319802855]
+transform = Transform3D(0.9999687, 0, -3.7303494e-12, 0, 0.99995565, 0, -3.5527137e-15, 0, 1, 0.047584534, -0.28076822, 0.68709755)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.500725)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall11" unique_id=667535782]
+transform = Transform3D(-4.371139e-08, 0, -1.5292001, 0, 0.9999999, 0, 0.65397733, 0, -4.371411e-08, 19.226355, -0.28076836, -4.8604355)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 24.482822)
+
+[node name="Wall12" type="CSGBox3D" parent="Walls and floor" unique_id=1467142435]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, -64.17322, 1.4861364, -79.4372)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 10.520271)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall12" unique_id=1352438224]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, 10.157875, -0.28076822, -4.0479736)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.986137)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall12" unique_id=1739085566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000538, 0.04758835, -0.2807684, 0.44569016)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 10.90785)
+
+[node name="Wall13" type="CSGBox3D" parent="Walls and floor" unique_id=920814805]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, -43.851803, 1.4861364, -91.26624)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 11.81605)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall13" unique_id=1843223347]
+transform = Transform3D(-4.371139e-08, 0, -1.5292106, 0, 1, 0, 0.65397733, 0, -4.371441e-08, -4.246254, -0.2807684, 4.7244053)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 5.8793063)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall13" unique_id=677145401]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.04758835, -0.28076822, -0.25763416)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.986137)
+
+[node name="Wall14" type="CSGBox3D" parent="Walls and floor" unique_id=1564077949]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, -30.030767, 1.4861364, -85.28738)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 6.547123)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall14" unique_id=262511065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000691, 0.04758835, -0.2807684, 0.7466755)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 5.8793063)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall14" unique_id=1790805128]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, -7.5704737, -0.28076822, -2.0613995)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.986137)
+
+[node name="Wall15" type="CSGBox3D" parent="Walls and floor" unique_id=1397072418]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 2.3676453, 1.4861364, -89.92283)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 6.547123)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall15" unique_id=947206361]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, 10.53788, -0.28076822, -2.096508)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.121107)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall15" unique_id=1470910114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000757, 0.04758835, -0.2807684, 0.25528908)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.8620167)
+
+[node name="Wall16" type="CSGBox3D" parent="Walls and floor" unique_id=749428070]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, 23.837553, 1.4861364, -96.00509)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 12.538973)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall16" unique_id=2007910892]
+transform = Transform3D(-4.371139e-08, 0, -1.5292263, 0, 1, 0, 0.65397733, 0, -4.3714863e-08, -6.7869606, -0.2807684, 5.134635)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.244973)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall16" unique_id=60555074]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.04758835, -0.28076822, -0.3991189)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.121107)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall16" unique_id=1080263285]
+transform = Transform3D(-4.371139e-08, 0, -1.5292207, 0, 1, 0, 0.65397733, 0, -4.37147e-08, 6.217201, -0.2807684, 5.134636)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.8620167)
+
+[node name="Wall17" type="CSGBox3D" parent="Walls and floor" unique_id=253203019]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 38.866653, 1.4861364, -108.730385)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 6.547123)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall17" unique_id=1220806502]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539659, 0, -4.3709903e-08, -41.66318, -0.28076822, -2.0218163)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 54.04071)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall17" unique_id=1114224682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000757, 0.04758835, -0.2807684, 0.25528908)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.8620167)
+
+[node name="Wall18" type="CSGBox3D" parent="Walls and floor" unique_id=731953980]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, -42.841084, 1.4861364, -114.592705)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 53.768177)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall18" unique_id=1353036602]
+transform = Transform3D(-4.371139e-08, 0, -1.529226, 0, 1, 0, 0.65397733, 0, -4.3714852e-08, 4.542309, -0.2807684, 18.635553)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 5.902394)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall18" unique_id=98766409]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.04758072, -0.28076822, 0.49532032)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 54.03302)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall18" unique_id=1810297236]
+transform = Transform3D(-4.371139e-08, 0, -1.5292001, 0, 1, 0, 0.65397733, 0, -4.371411e-08, -18.486286, -0.2807684, -17.562454)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 24.482822)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Walls and floor/Wall18" unique_id=459291580]
+transform = Transform3D(-4.371139e-08, 0, -1.5292119, 0, 1, 0, 0.65397733, 0, -4.3714447e-08, 10.668903, -0.2807684, -2.9271975)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 12.791665)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Walls and floor/Wall18" unique_id=1297865678]
+transform = Transform3D(-4.371139e-08, 0, -1.5292366, 0, 1, 0, 0.65397733, 0, -4.371515e-08, 9.409443, -0.2807684, 9.827115)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.974072)
+
+[node name="Wall19" type="CSGBox3D" parent="Walls and floor" unique_id=781474828]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 38.866653, 1.4861364, -81.649635)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.888796)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall19" unique_id=2134308679]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, -5.5748672, -0.28076822, 2.5043182)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.7436557)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall19" unique_id=522668412]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, 13.680313, -0.28076822, -0.7978325)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 17.57544)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall19" unique_id=1826252718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000794, 0.04758835, -0.2807684, -0.43624115)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.244973)
+
+[node name="Wall20" type="CSGBox3D" parent="Walls and floor" unique_id=380147781]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, 27.917227, 1.4861364, -74.18312)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 5.543984)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall20" unique_id=1248838404]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.047599792, -0.28076822, 0.07231903)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 6.7436557)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall20" unique_id=1668159162]
+transform = Transform3D(-4.371139e-08, 0, -1.5292469, 0, 1, 0, 0.65397733, 0, -4.371545e-08, -7.230036, -0.2807684, 0.039403915)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 9.7303295)
+
+[node name="Wall21" type="CSGBox3D" parent="Walls and floor" unique_id=696961870]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, 66.96542, 1.4861364, -83.90747)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 17.245625)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall21" unique_id=2115258052]
+transform = Transform3D(-4.371139e-08, 0, -1.5292338, 0, 1, 0, 0.65397733, 0, -4.3715072e-08, 13.649807, -0.2807684, -2.4623013)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 16.776966)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Walls and floor/Wall21" unique_id=2053321218]
+transform = Transform3D(-4.371139e-08, 0, -1.5292376, 0, 1, 0, 0.65397733, 0, -4.3715183e-08, -10.697098, -0.2807684, -2.4623032)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 14.283136)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall21" unique_id=2011554589]
+transform = Transform3D(-4.371139e-08, 0, -1.5292263, 0, 1, 0, 0.65397733, 0, -4.3714863e-08, -6.142254, -0.2807684, 5.971903)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.244973)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall21" unique_id=1177414581]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.047599792, -0.28076822, -0.59503937)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 17.57544)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Walls and floor/Wall21" unique_id=769268661]
+transform = Transform3D(-4.371143e-08, 0, -1.5292346, 0, 1, 0, 0.65397733, 0, -4.3715097e-08, 6.1599197, -0.2807684, 5.971903)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 7.997052)
+
+[node name="Wall22" type="CSGBox3D" parent="Walls and floor" unique_id=386072290]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 59.622658, 1.4861364, -111.55686)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 16.889284)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall22" unique_id=1535753140]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, -13.135902, -0.28076822, -7.2610664)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 17.181095)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall22" unique_id=826725798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000843, 0.04758835, -0.2807684, 0.4623909)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 16.776966)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall22" unique_id=1560287862]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, 10.389906, -0.28076822, -4.7986298)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.292084)
+
+[node name="Wall23" type="CSGBox3D" parent="Walls and floor" unique_id=1182983363]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, 33.086727, 1.4861364, -132.84799)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 16.718216)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall23" unique_id=534179092]
+transform = Transform3D(-4.371139e-08, 0, -1.529226, 0, 1, 0, 0.65397733, 0, -4.3714852e-08, -4.9366837, -0.2807684, -7.1476665)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 5.902394)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall23" unique_id=73822311]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.047584534, -0.28076822, 0.4203682)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 17.181095)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall23" unique_id=1042867971]
+transform = Transform3D(-4.371139e-08, 0, -1.529226, 0, 1, 0, 0.65397733, 0, -4.3714852e-08, 4.541031, -0.2807684, -1.0799227)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 5.902394)
+
+[node name="Wall24" type="CSGBox3D" parent="Walls and floor" unique_id=1252315517]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 11.946247, 1.4861364, -123.98172)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 4.3468637)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall24" unique_id=754708667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000792, 0.04758835, -0.2807684, 0.2177124)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 5.902394)
+
+[node name="Wall25" type="CSGBox3D" parent="Walls and floor" unique_id=942080439]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 84.46015, 1.4861364, -70.14505)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.448304)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall25" unique_id=270615924]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, 8.828129, -0.28076822, 2.6473713)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.071656)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall25" unique_id=1341537197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000794, 0.04758835, -0.2807684, -0.43624115)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.244973)
+
+[node name="Wall26" type="CSGBox3D" parent="Walls and floor" unique_id=608431620]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, 102.440506, 1.4861364, -62.90585)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 10.594135)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall26" unique_id=1616646013]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.047599792, -0.28076822, -0.33229065)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.071656)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall26" unique_id=1927316148]
+transform = Transform3D(-4.371139e-08, 0, -1.5292518, 0, 1, 0, 0.65397733, 0, -4.371559e-08, 10.909309, -0.2807684, 4.125168)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.895808)
+
+[node name="Wall27" type="CSGBox3D" parent="Walls and floor" unique_id=497667033]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 84.46015, 1.4861364, -97.795166)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.448304)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall27" unique_id=753573289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000881, 0.04758835, -0.2807684, 0.50494766)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.137677)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall27" unique_id=597143853]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, 8.828129, -0.28076822, -2.5665512)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.071656)
+
+[node name="Wall28" type="CSGBox3D" parent="Walls and floor" unique_id=687923657]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, 102.440506, 1.4861364, -105.26161)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 10.594135)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall28" unique_id=1204824936]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.047599792, -0.28076822, -0.33229065)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.071656)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall28" unique_id=1356000563]
+transform = Transform3D(-4.371139e-08, 0, -1.5292518, 0, 1, 0, 0.65397733, 0, -4.371559e-08, -11.083771, -0.2807684, 4.125168)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.895808)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall28" unique_id=196624382]
+transform = Transform3D(-4.371139e-08, 0, -1.5292395, 0, 1, 0, 0.65397733, 0, -4.371524e-08, 6.1190376, -0.2807684, -1.0385094)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.137677)
+
+[node name="Wall29" type="CSGBox3D" parent="Walls and floor" unique_id=216278225]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 114.49687, 1.4861364, -83.74169)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 12.611359)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall29" unique_id=1818540369]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000961, 0.04758835, -0.2807684, -0.059099197)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.895808)
+
+[node name="Wall30" type="CSGBox3D" parent="Walls and floor" unique_id=809323044]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 99.290596, 1.4861364, -118.533066)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 7.448304)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall30" unique_id=1801114594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000881, 0.04758835, -0.2807684, 0.50494766)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 8.137677)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall30" unique_id=1138192793]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, -10.207535, -0.28076822, -2.4296799)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.292084)
+
+[node name="Wall31" type="CSGBox3D" parent="Walls and floor" unique_id=1540471264]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, 79.28516, 1.4861364, -125.59646)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 11.751169)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall31" unique_id=1733458172]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.047599792, -0.28076822, 0.117860794)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.292084)
+
+[node name="Wall32" type="CSGBox3D" parent="Walls and floor" unique_id=1422595827]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, -94.65159, 1.4861364, -78.364006)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 23.209354)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall32" unique_id=1182542650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000622, 0.04758835, -0.2807684, -0.21276093)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 24.482822)
+
+[node name="Wall33" type="CSGBox3D" parent="Walls and floor" unique_id=1024693737]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, -51.5529, 1.4861364, -136.16249)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 12.7883005)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall33" unique_id=1388960263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000741, 0.04758835, -0.2807684, 0.63874054)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 13.392191)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall33" unique_id=80129898]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, 22.003807, -0.28076822, -5.1193886)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 28.547071)
+
+[node name="Wall34" type="CSGBox3D" parent="Walls and floor" unique_id=437491281]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, -7.778202, 1.4861364, -151.14664)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 28.200138)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall34" unique_id=1882870663]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.04761505, -0.28076822, -0.47482157)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 28.547071)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall34" unique_id=1685784542]
+transform = Transform3D(-4.371139e-08, 0, -1.529226, 0, 1, 0, 0.65397733, 0, -4.3714852e-08, -4.960472, -0.2807684, 12.796803)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 5.902394)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls and floor/Wall34" unique_id=1450579956]
+transform = Transform3D(-4.371139e-08, 0, -1.5292366, 0, 1, 0, 0.65397733, 0, -4.371515e-08, -9.571053, -0.2807684, -2.0793788)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.974072)
+
+[node name="Wall35" type="CSGBox3D" parent="Walls and floor" unique_id=1272497259]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 29.814865, 1.4861364, -142.23454)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 4.3468637)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall35" unique_id=310808711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000792, 0.04758835, -0.2807684, 0.2177124)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 5.902394)
+
+[node name="Wall36" type="CSGBox3D" parent="Walls and floor" unique_id=2044934223]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, -13.99332, 1.4861364, -132.75195)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 10.582809)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall36" unique_id=571241795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000861, 0.047590256, -0.2807684, 0.14655685)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 11.974072)
+
+[node name="Wall37" type="CSGBox3D" parent="Walls and floor" unique_id=1327573742]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 59.622658, 1.4861364, -60.99566)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 13.853424)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall37" unique_id=233821875]
+transform = Transform3D(-4.3710486e-08, 0, 1.5291051, 0, 0.99996954, 0, -0.6539634, 0, -4.37097e-08, -11.926121, -0.28076822, 5.5300837)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 15.534485)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall37" unique_id=1815250723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000868, 0.04758835, -0.2807684, -0.7846279)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 14.283136)
+
+[node name="Wall38" type="CSGBox3D" parent="Walls and floor" unique_id=55278447]
+transform = Transform3D(-8.418235e-08, 0, 2.9448538, 0, 2.0731416, 0, -1.9258678, 0, -1.2872366e-07, 38.480618, 1.4861364, -44.618702)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 13.042246)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall38" unique_id=1285574962]
+transform = Transform3D(0.9999785, 0, -2.593481e-12, 0, 0.99996954, 0, -2.1316282e-14, 0, 1, 0.047599792, -0.28076822, -0.6200962)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 15.534485)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls and floor/Wall38" unique_id=287504655]
+transform = Transform3D(-4.371139e-08, 0, -1.5292469, 0, 1, 0, 0.65397733, 0, -4.371545e-08, 8.121183, -0.2807684, -3.5476646)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 9.7303295)
+
+[node name="Wall39" type="CSGBox3D" parent="Walls and floor" unique_id=142960795]
+transform = Transform3D(1.9258676, 0, 0, 0, 2.0731416, 0, 0, 0, 2.9448538, 27.941616, 1.4861364, -59.486855)
+material_override = SubResource("StandardMaterial3D_4xowi")
+material_overlay = SubResource("StandardMaterial3D_a202f")
+use_collision = true
+size = Vector3(3.566162, 3.1713867, 8.048856)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls and floor/Wall39" unique_id=337892834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000929, 0.04758835, -0.2807684, -0.2910061)
+material_override = SubResource("StandardMaterial3D_noarx")
+operation = 2
+size = Vector3(3.1712646, 3.410736, 9.7303295)
+
+[node name="Floor" type="CSGBox3D" parent="Walls and floor" unique_id=75744971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.237148, -0.55181783, -87.830536)
+material_override = SubResource("StandardMaterial3D_a0tk4")
+use_collision = true
+size = Vector3(286.1904, 1, 196.49094)
+
+[node name="Skibidi toilet" parent="." unique_id=734513457 instance=ExtResource("2_noarx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.34584785, -0.038184434, -55.48861)
