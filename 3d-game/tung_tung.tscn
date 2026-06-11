@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dv76bn8jhbk55"]
+
+[ext_resource type="Texture2D" uid="uid://cfq7ceem34psa" path="res://Tung-Tung-Tung-Sahur-Transparent-HQ.png" id="1_jmukm"]
+[ext_resource type="Script" uid="uid://crowgtrsosfbn" path="res://tung_tung.gd" id="1_ycpi4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jmukm"]
+size = Vector3(1.5444336, 2.9820557, 1)
+
+[node name="tung tung" type="Node3D" unique_id=262417073]
+script = ExtResource("1_ycpi4")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1063557768]
+visibility_range_end = 25.0
+visibility_range_end_margin = 25.0
+visibility_range_fade_mode = 2
+texture = ExtResource("1_jmukm")
+
+[node name="Area3D" type="Area3D" parent="Sprite3D" unique_id=507453165]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/Area3D" unique_id=1073375415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2722168, 0.113098145, 0.09284985)
+shape = SubResource("BoxShape3D_jmukm")
+
+[connection signal="body_entered" from="Sprite3D/Area3D" to="." method="_on_area_3d_body_entered"]

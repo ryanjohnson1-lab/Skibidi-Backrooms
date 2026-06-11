@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://01ey66m444ni"]
+
+[ext_resource type="Script" uid="uid://dw1q831t6qcen" path="res://character_body_3d.gd" id="1_nlfgb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lxpfj"]
+size = Vector3(0.6182251, 1.147583, 0.8522949)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lcsax"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlfgb"]
+albedo_color = Color(0.581033, 0.58103293, 0.5810329, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxpfj"]
+albedo_color = Color(1, 0.7411765, 0.57254905, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qu8bl"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mi2r1"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nlfgb"]
+size = Vector3(0.68896484, 1.6313477, 1.2397461)
+
+[node name="Skibidi toilet" type="Node3D" unique_id=734513457]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=684078232]
+script = ExtResource("1_nlfgb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1071683149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13579631, 0.5532501, -0.21654594)
+shape = SubResource("BoxShape3D_lxpfj")
+
+[node name="Parts" type="Node3D" parent="CharacterBody3D" unique_id=183344465]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=328078013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18218994, 0.034462005, 0.28277588)
+material_override = SubResource("StandardMaterial3D_lcsax")
+size = Vector3(0.6356201, 0.096191406, 0.5782471)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=1233147674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18719271, 0.2627677, 0.2897179)
+material_override = SubResource("StandardMaterial3D_lcsax")
+size = Vector3(0.22064209, 0.3927002, 0.3550415)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=1053778956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18022707, 0.48539925, 0.31043172)
+material_override = SubResource("StandardMaterial3D_lcsax")
+size = Vector3(0.5358734, 0.15481567, 0.5540314)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=319161606]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18022707, 0.7685572, -0.07629526)
+material_override = SubResource("StandardMaterial3D_lcsax")
+size = Vector3(0.5358734, 0.482193, 0.26668167)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=699579881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18554953, 0.79247916, 0.05233559)
+material_override = SubResource("StandardMaterial3D_lcsax")
+size = Vector3(0.59225273, 0.5300369, 0.052754402)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=195815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46689707, 0.9473305, -0.11970571)
+material_override = SubResource("StandardMaterial3D_nlfgb")
+size = Vector3(0.020597458, 0.03271866, 0.0796299)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=876932168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18210328, 0.6900627, 0.3213756)
+material_override = SubResource("StandardMaterial3D_lxpfj")
+size = Vector3(0.12469101, 0.30970764, 0.14558792)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=1028179305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18291509, 0.93412584, 0.36802697)
+material_override = SubResource("StandardMaterial3D_lxpfj")
+size = Vector3(0.335258, 0.318882, 0.32832813)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=1045635672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2704952, 0.9897642, 0.535416)
+material_override = SubResource("StandardMaterial3D_qu8bl")
+size = Vector3(0.07303518, 0.03846073, 0.024464846)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=427307356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.091367155, 0.9897642, 0.535416)
+material_override = SubResource("StandardMaterial3D_qu8bl")
+size = Vector3(0.07303518, 0.03846073, 0.024464846)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="CharacterBody3D/Parts" unique_id=2034314049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17882125, 0.86027473, 0.535416)
+material_override = SubResource("StandardMaterial3D_mi2r1")
+size = Vector3(0.24794337, 0.03846073, 0.024464846)
+
+[node name="Area3D" type="Area3D" parent="CharacterBody3D" unique_id=1273003724]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/Area3D" unique_id=1323507653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15551758, 0.31567383, -0.11987305)
+shape = SubResource("BoxShape3D_nlfgb")
+
+[connection signal="body_entered" from="CharacterBody3D/Area3D" to="CharacterBody3D" method="_on_area_3d_body_entered"]
